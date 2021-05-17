@@ -1,0 +1,7 @@
+[
+	{
+		"source": "/",
+		"destination": "/tutorials",
+		"permanent": true
+	}
+]

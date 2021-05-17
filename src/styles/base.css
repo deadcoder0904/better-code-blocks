@@ -1,0 +1,18 @@
+/* add Inter font */
+@font-face {
+	font-family: 'Inter var';
+	font-weight: 100 600;
+	font-display: swap;
+	font-style: normal;
+	font-named-instance: 'Regular';
+	src: url('/fonts/Inter-roman.var-latin.woff2?3.13') format('woff2');
+}
+
+@font-face {
+	font-family: 'Inter var';
+	font-weight: 100 600;
+	font-display: swap;
+	font-style: italic;
+	font-named-instance: 'Italic';
+	src: url('/fonts/Inter-italic.var-latin.woff2?3.13') format('woff2');
+}
