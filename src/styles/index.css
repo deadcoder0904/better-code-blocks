@@ -4,8 +4,132 @@
 @import './nprogress.css';
 @import './base.css';
 @import './grid.css';
-@import './prism.css';
+/* @import './prism.css'; */
 /*! purgecss end ignore */
 
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+@layer base {
+	:root {
+		--font-mono: 'Fira Mono, monospace';
+
+		--text-1: 12px;
+		--text-2: 14px;
+
+		--colors-black: rgba(19, 19, 21, 1);
+		--colors-white: rgba(255, 255, 255, 1);
+		--colors-gray: rgba(128, 128, 128, 1);
+		--colors-blue: rgba(3, 136, 252, 1);
+		--colors-red: rgba(249, 16, 74, 1);
+		--colors-yellow: rgba(255, 221, 0, 1);
+		--colors-pink: rgba(232, 141, 163, 1);
+		--colors-turq: rgba(0, 245, 196, 1);
+		--colors-orange: rgba(255, 135, 31, 1);
+
+		--space-1: 4px;
+		--space-2: 8px;
+		--space-3: 16px;
+
+		--radii-1: 2px;
+		--radii-2: 4px;
+	}
+
+	pre {
+		--background: hsla(206 12% 89.5% / 5%);
+		--text: var(--colors-white);
+		--syntax1: var(--colors-orange);
+		--syntax2: var(--colors-turq);
+		--syntax3: var(--colors-pink);
+		--syntax4: var(--colors-pink);
+		--comment: var(--colors-gray);
+		--removed: var(--colors-red);
+		--added: var(--colors-turq);
+
+		box-sizing: border-box;
+		padding: var(--space-3);
+		overflow: auto;
+		font-family: var(--font-mono);
+		font-size: var(--text-2);
+		line-height: var(--space-3);
+		white-space: pre;
+		background-color: var(--background);
+		color: var(--text);
+
+		& > code {
+			display: block;
+		}
+
+		.token.parameter {
+			color: var(--text);
+		}
+
+		.token.tag,
+		.token.class-name,
+		.token.selector,
+		.token.selector .class,
+		.token.function {
+			color: var(--syntax1);
+		}
+
+		.token.attr-value,
+		.token.class,
+		.token.string,
+		.token.number,
+		.token.unit,
+		.token.color {
+			color: var(--syntax2);
+		}
+
+		.token.attr-name,
+		.token.keyword,
+		.token.rule,
+		.token.operator,
+		.token.pseudo-class,
+		.token.important {
+			color: var(--syntax3);
+		}
+
+		.token.punctuation,
+		.token.module,
+		.token.property {
+			color: var(--syntax4);
+		}
+
+		.token.comment {
+			color: var(--comment);
+		}
+
+		.token.atapply .token:not(.rule):not(.important) {
+			color: inherit;
+		}
+
+		.language-shell .token:not(.comment) {
+			color: inherit;
+		}
+
+		.language-css .token.function {
+			color: inherit;
+		}
+
+		.token.deleted:not(.prefix),
+		.token.inserted:not(.prefix) {
+			display: block;
+			px: $4;
+			mx: -$4;
+		}
+
+		.token.deleted:not(.prefix) {
+			color: var(--removed);
+		}
+
+		.token.inserted:not(.prefix) {
+			color: var(--added);
+		}
+
+		.token.deleted.prefix,
+		.token.inserted.prefix {
+			userselect: none;
+		}
+	}
+}

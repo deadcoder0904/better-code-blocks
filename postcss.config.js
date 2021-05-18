@@ -3,6 +3,8 @@ module.exports = {
 		'postcss-import',
 		'tailwindcss',
 		'postcss-flexbugs-fixes',
+		'postcss-nested',
+		'postcss-css-variables',
 		[
 			'postcss-preset-env',
 			{
@@ -11,7 +13,8 @@ module.exports = {
 				},
 				stage: 3,
 				features: {
-					'custom-properties': false,
+					'custom-properties': true,
+					'nesting-rules': true,
 				},
 			},
 		],
