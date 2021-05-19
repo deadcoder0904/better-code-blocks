@@ -1,5 +1,5 @@
 pre {
-	@apply box-border p-3 overflow-auto font-mono text-lg leading-3 whitespace-pre bg-blueGray-900 text-yellow-200;
+	@apply box-border p-3 overflow-auto font-mono text-lg leading-3 whitespace-pre bg-blue-gray-900 text-yellow-200;
 }
 
 pre > code {

@@ -1,7 +1,7 @@
 import { HTMLAttributes } from 'react'
 
-export const PreCode = ({ className = '', ...props }: HTMLAttributes<HTMLPreElement>) => {
-	console.log('pRecode')
-	console.log({ props })
-	return <code className={`${className} text-blueGray-200`} {...props} />
+export const PreCode = (props: HTMLAttributes<HTMLPreElement> & { theme: string }) => {
+	const { theme } = props
+	console.log(theme)
+	return <code className={`theme-${theme} text-blueGray-200`} {...props} />
 }

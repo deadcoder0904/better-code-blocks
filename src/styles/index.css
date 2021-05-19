@@ -36,7 +36,7 @@
 	}
 
 	pre {
-		--background: hsla(206 12% 89.5% / 5%);
+		--background: rgba(17, 24, 39, 1);
 		--text: var(--colors-white);
 		--syntax1: var(--colors-orange);
 		--syntax2: var(--colors-turq);
@@ -115,8 +115,8 @@
 		.token.deleted:not(.prefix),
 		.token.inserted:not(.prefix) {
 			display: block;
-			px: $4;
-			mx: -$4;
+			px: 16px;
+			mx: -16px;
 		}
 
 		.token.deleted:not(.prefix) {

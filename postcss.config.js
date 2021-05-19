@@ -3,8 +3,6 @@ module.exports = {
 		'postcss-import',
 		'tailwindcss',
 		'postcss-flexbugs-fixes',
-		'postcss-nested',
-		'postcss-css-variables',
 		[
 			'postcss-preset-env',
 			{

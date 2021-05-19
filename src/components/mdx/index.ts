@@ -27,7 +27,7 @@ export const MDXComponents = {
 	strong: Strong,
 	inlineCode: Code,
 	*/
-	pre: Pre,
+	// pre: Pre,
 	'pre.code': PreCode,
 	img: Img,
 }
