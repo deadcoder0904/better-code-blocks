@@ -6,8 +6,10 @@
 // import { H6 } from '@/components/mdx/H6'
 import { Img } from '@/components/mdx/Img'
 import { Pre } from '@/components/mdx/Pre'
+import { H } from '@/components/mdx/H'
+import { RegisterLink } from '@/components/mdx/RegisterLink'
 // import { Code } from '@/components/mdx/Code'
-import { PreCode } from '@/components/mdx/PreCode'
+import { Code } from '@/components/mdx/Code'
 // import { P } from '@/components/mdx/P'
 // import { HR } from '@/components/mdx/HR'
 // import { A } from '@/components/mdx/A'
@@ -27,7 +29,9 @@ export const MDXComponents = {
 	strong: Strong,
 	inlineCode: Code,
 	*/
-	// pre: Pre,
-	'pre.code': PreCode,
+	pre: Pre,
+	code: Code,
 	img: Img,
+	H,
+	RegisterLink,
 }

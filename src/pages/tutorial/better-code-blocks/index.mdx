@@ -1,0 +1,86 @@
+export const meta = {
+	title: 'Better Code Blocks with Next.js, Tailwind CSS & MDX',
+	description: 'Build a beautiful code block using Next.js, Tailwind CSS& MDX.',
+	date: '2021-06-01T14:54:37.229Z',
+	tags: ['code blocks', 'next.js', 'mdx', 'tailwindcss'],
+	author: 'Akshay Kadam (A2K)',
+	published: true,
+}
+
+Code blocks, but better. There are many features:
+
+- Syntax highlight
+- Apply multiple themes
+- Highlight specific lines
+- Highlight specific words
+- Interact with the content
+- Make specific words link to other pages
+- Show line numbers
+- Make it collapsible/expandable
+- Render a preview
+
+<!-- more -->
+
+# Different Themes using Tailwind CSS
+
+We have a few different themes on our code blocks.
+
+## Default Theme
+
+```jsx
+import React from 'react'
+
+export function Counter({ initialCount = 0 }) {
+	const [count, setCount] = React.useState(initialCount)
+	return (
+		<button type="button" onClick={() => setCount((prevCount) => prevCount + 1)}>
+			{count}
+		</button>
+	)
+}
+```
+
+## Orange Theme
+
+```jsx theme=orange
+import React from 'react'
+
+export function Counter({ initialCount = 0 }) {
+	const [count, setCount] = React.useState(initialCount)
+	return (
+		<button type="button" onClick={() => setCount((prevCount) => prevCount + 1)}>
+			{count}
+		</button>
+	)
+}
+```
+
+## Pink Theme
+
+```jsx theme=pink
+import React from 'react'
+
+export function Counter({ initialCount = 0 }) {
+	const [count, setCount] = React.useState(initialCount)
+	return (
+		<button type="button" onClick={() => setCount((prevCount) => prevCount + 1)}>
+			{count}
+		</button>
+	)
+}
+```
+
+## Turquoise Theme
+
+```jsx theme=turq
+import React from 'react'
+
+export function Counter({ initialCount = 0 }) {
+	const [count, setCount] = React.useState(initialCount)
+	return (
+		<button type="button" onClick={() => setCount((prevCount) => prevCount + 1)}>
+			{count}
+		</button>
+	)
+}
+```

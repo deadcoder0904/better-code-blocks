@@ -1,8 +1,14 @@
 import { HTMLAttributes } from 'react'
 
-export const Code = ({ className = '', ...props }: HTMLAttributes<HTMLElement>) => (
+export const Code = ({
+	className = '',
+	theme,
+	...props
+}: HTMLAttributes<HTMLElement> & { theme: string }) => (
 	<code
-		className={`${className} p-1 overflow-x-auto bg-gray-900 text-blueGray-200 rounded-md text-base`}
+		className={`p-1 overflow-x-auto text-blueGray-200 rounded-md text-base ${className} ${
+			theme ? `${theme}-theme` : 'bg-gray-900'
+		}`}
 		{...props}
 	/>
 )
