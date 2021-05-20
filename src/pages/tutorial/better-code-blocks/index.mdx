@@ -84,3 +84,83 @@ export function Counter({ initialCount = 0 }) {
 	)
 }
 ```
+
+# Other features
+
+Here are the other features like `lineHighlights`, `wordHighlights`, `showLineNumbers`, `RegisterLink` and `H`
+
+## Line Highlights
+
+If I want to select line 3:
+
+```html line=3
+<div>
+	<h1>Hello world</h1>
+	<p>This is a code block example.</p>
+	<p>Do you like it?</p>
+</div>
+```
+
+I can also use ranges:
+
+```html line=2-4
+<div>
+	<h1>Hello world</h1>
+	<p>This is a code block example.</p>
+	<p>Do you like it?</p>
+</div>
+```
+
+Or multiple unique lines:
+
+```html line=1,5
+<div>
+	<h1>Hello world</h1>
+	<p>This is a code block example.</p>
+	<p>Do you like it?</p>
+</div>
+```
+
+## Word highlights
+
+```jsx
+import React from '__react__'
+
+function Hello() {
+	return <h1>Hello world</h1>
+}
+```
+
+## Show Line Numbers
+
+```html showLineNumbers
+<div>
+	<h1>Hello world</h1>
+	<p>This is a code block example.</p>
+	<p>Do you like it?</p>
+</div>
+```
+
+## RegisterLink
+
+<RegisterLink id="demo" index="1" href="https://reactjs.org/" />
+
+```jsx id=demo
+import React from '__react__'
+
+function Hello() {
+	return <h1>Hello world</h1>
+}
+```
+
+## Highlight
+
+To highlight the words <H id="highlight" index="1">hover me</H>.
+
+```jsx id=highlight
+import React from '__react__'
+
+function Hello() {
+	return <h1>Hello world</h1>
+}
+```

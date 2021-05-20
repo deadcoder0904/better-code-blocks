@@ -7,8 +7,9 @@ type PreProps = {
 }
 
 export const Pre = ({ children, theme, showLineNumbers }: PreProps) => {
+	console.log('Pre -> start')
 	console.log({ children, theme, showLineNumbers })
-	// console.log(theme) /// i can access `theme` here. now just need to find a way to style it
+	console.log('Pre -> end')
 	return (
 		<pre
 			className={`px-4 py-3 overflow-x-auto rounded-md ${
