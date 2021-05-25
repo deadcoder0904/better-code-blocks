@@ -166,7 +166,7 @@
 
 	.highlight-line {
 		&[data-highlighted='false'] {
-			opacity: 0.3;
+			opacity: 0.4;
 		}
 
 		&[data-highlighted='true'] {
@@ -175,7 +175,7 @@
 
 	.highlight-word {
 		&.on {
-			background-color: red;
+			background-color: darkblue;
 		}
 	}
 }
