@@ -23,6 +23,8 @@
 
 		--radii-1: 2px;
 		--radii-2: 4px;
+
+		--line-numbers: rgba(128, 128, 128, 1);
 	}
 
 	pre {
@@ -150,15 +152,30 @@
 	.line-numbers {
 		.highlight-line {
 			position: relative;
-			paddingleft: 16px;
+			padding-left: 20px;
 
 			&::before {
 				content: attr(data-line);
 				position: absolute;
-				left: -5;
+				left: 0;
 				top: 0;
-				color: var(--lineNumbers);
+				color: var(--line-numbers);
 			}
+		}
+	}
+
+	.highlight-line {
+		&[data-highlighted='false'] {
+			opacity: 0.3;
+		}
+
+		&[data-highlighted='true'] {
+		}
+	}
+
+	.highlight-word {
+		&.on {
+			background-color: red;
 		}
 	}
 }
