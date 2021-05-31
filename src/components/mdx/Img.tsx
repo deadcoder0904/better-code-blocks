@@ -1,8 +1,8 @@
 import Image, { ImageProps } from 'next/image'
 
-export const Img = ({ className = '', ...props }: ImageProps) => (
+export const Img = ({ className = '', src }: ImageProps) => (
 	<div className="unset-img full-bleed">
-		<Image className={`${className} custom-img`} layout="fill" {...props} />
+		<Image className={`${className} custom-img`} src={src} layout="fill" />
 	</div>
 )
 
