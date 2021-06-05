@@ -1,7 +1,19 @@
-import { HTMLAttributes } from 'react'
+import React from 'react'
 
-export const PreCode = (props: HTMLAttributes<HTMLPreElement> & { theme: string }) => {
-	const { theme } = props
-	console.log(theme)
-	return <code className={`${theme}-theme text-blueGray-200`} {...props} />
+type PreProps = {
+	children: React.ReactChild
+	theme: string
+	showLineNumbers: string
+}
+
+export const PreCode = ({ children, theme, showLineNumbers }: PreProps) => {
+	return (
+		<code
+			className={`px-4 py-3 overflow-x-auto rounded-md full-bleed ${
+				theme ? `${theme}-theme` : 'bg-gray-900'
+			} ${showLineNumbers ? 'line-numbers' : ''}`}
+		>
+			{children}
+		</code>
+	)
 }

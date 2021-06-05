@@ -123,59 +123,59 @@
 		.token.inserted.prefix {
 			userselect: none;
 		}
-	}
 
-	.orange-theme {
-		--background: rgb(255 135 31 / 10%);
-		--syntax1: var(--colors-pink);
-		--syntax2: var(--colors-turq);
-		--syntax3: var(--colors-orange);
-		--syntax4: var(--colors-orange);
-	}
+		&.orange-theme {
+			--background: rgb(255 135 31 / 10%);
+			--syntax1: var(--colors-pink);
+			--syntax2: var(--colors-turq);
+			--syntax3: var(--colors-orange);
+			--syntax4: var(--colors-orange);
+		}
 
-	.pink-theme {
-		--background: hsl(345deg 66% 73% / 20%);
-		--syntax1: var(--colors-orange);
-		--syntax2: var(--colors-turq);
-		--syntax3: var(--colors-pink);
-		--syntax4: var(--colors-pink);
-	}
+		&.pink-theme {
+			--background: hsl(345deg 66% 73% / 20%);
+			--syntax1: var(--colors-orange);
+			--syntax2: var(--colors-turq);
+			--syntax3: var(--colors-pink);
+			--syntax4: var(--colors-pink);
+		}
 
-	.turq-theme {
-		--background: rgba(0, 245, 196, 0.15);
-		--syntax1: var(--colors-orange);
-		--syntax2: var(--colors-pink);
-		--syntax3: var(--colors-turq);
-		--syntax4: var(--colors-turq);
-	}
+		&.turq-theme {
+			--background: rgba(0, 245, 196, 0.15);
+			--syntax1: var(--colors-orange);
+			--syntax2: var(--colors-pink);
+			--syntax3: var(--colors-turq);
+			--syntax4: var(--colors-turq);
+		}
 
-	.line-numbers {
-		.highlight-line {
-			position: relative;
-			padding-left: 20px;
+		&.line-numbers {
+			.highlight-line {
+				position: relative;
+				padding-left: 20px;
 
-			&::before {
-				content: attr(data-line);
-				position: absolute;
-				left: 0;
-				top: 0;
-				color: var(--line-numbers);
+				&::before {
+					content: attr(data-line);
+					position: absolute;
+					left: 0;
+					top: 0;
+					color: var(--line-numbers);
+				}
 			}
 		}
-	}
 
-	.highlight-line {
-		&[data-highlighted='false'] {
-			opacity: 0.4;
+		.highlight-line {
+			&[data-highlighted='false'] {
+				opacity: 0.4;
+			}
+
+			&[data-highlighted='true'] {
+			}
 		}
 
-		&[data-highlighted='true'] {
-		}
-	}
-
-	.highlight-word {
-		&.on {
-			background-color: darkblue;
+		.highlight-word {
+			&.on {
+				background-color: darkblue;
+			}
 		}
 	}
 }

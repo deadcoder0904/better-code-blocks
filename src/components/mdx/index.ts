@@ -8,7 +8,7 @@ import { Img } from '@/components/mdx/Img'
 import { Pre } from '@/components/mdx/Pre'
 import { H } from '@/components/mdx/H'
 import { RegisterLink } from '@/components/mdx/RegisterLink'
-// import { Code } from '@/components/mdx/Code'
+import { PreCode } from '@/components/mdx/PreCode'
 import { Code } from '@/components/mdx/Code'
 // import { P } from '@/components/mdx/P'
 // import { HR } from '@/components/mdx/HR'
@@ -27,10 +27,11 @@ export const MDXComponents = {
 	hr: HR,
 	a: A,
 	strong: Strong,
-	inlineCode: Code,
 	*/
 	pre: Pre,
-	code: Code,
+	// inlineCode: Code,
+	// code: Code,
+	// 'pre.code': PreCode,
 	img: Img,
 	H,
 	RegisterLink,

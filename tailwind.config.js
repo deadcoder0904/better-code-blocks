@@ -11,7 +11,19 @@ const almostFullBleed = {
 	width: '90%',
 }
 
+function withOpacity(variableName) {
+	return ({ opacityValue }) => {
+		if (opacityValue !== undefined) {
+			// return 'rgba(var(' + variableName + '), ' + opacityValue + ')'
+			return `rgba(var(${variableName}), ${opacityValue})`
+		}
+		// return 'rgba(var(' + variableName + '))'
+		return `rgb(var(${variableName}))`
+	}
+}
+
 module.exports = {
+	mode: 'jit',
 	future: {
 		removeDeprecatedGapUtilities: true,
 		purgeLayersByDefault: true,
@@ -203,7 +215,17 @@ module.exports = {
 							// content: 'none',
 						},
 						pre: {
-							backgroundColor: '-',
+							// --background: var(--background);
+							// --text: var(--colors-white);
+							// --syntax1: var(--colors-orange);
+							// --syntax2: var(--colors-turq);
+							// --syntax3: var(--colors-pink);
+							// --syntax4: var(--colors-pink);
+							// --comment: var(--colors-gray);
+							// --removed: var(--colors-red);
+							// --added: var(--colors-turq);
+							// backgroundColor: withOpacity('--background'),
+							// color: withOpacity('--colors-white'),
 							color: theme('colors.white'),
 							borderRadius: 0,
 							marginTop: 0,
