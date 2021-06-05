@@ -7,9 +7,6 @@ type PreProps = {
 }
 
 export const Pre = ({ children, theme, showLineNumbers }: PreProps) => {
-	console.log('Pre -> start')
-	console.log({ children, theme, showLineNumbers })
-	console.log('Pre -> end')
 	return (
 		<pre
 			className={`px-4 py-3 overflow-x-auto rounded-md ${

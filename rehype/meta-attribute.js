@@ -8,14 +8,16 @@ module.exports = (options = {}) => {
 	}
 
 	function visitor(node, index, parentNode) {
-		var match
+		let match
 
-		if (node.tagName === 'code' && node.data && node.data.meta) {
-			re.lastIndex = 0 // Reset regex.
+		if (node.tagName === 'pre') {
+			const code = node.children.find((d) => d.tagName === 'code')
 
-			while ((match = re.exec(node.data.meta))) {
-				node.properties[match[1]] = match[2] || match[3] || match[4] || ''
-				parentNode.properties[match[1]] = match[2] || match[3] || match[4] || ''
+			if (code.properties.metastring) {
+				code.properties.metastring.split(' ').forEach((item) => {
+					const [metaKey, metaValue] = item.split('=')
+					node.properties[metaKey] = metaValue || ''
+				})
 			}
 		}
 	}
