@@ -14,10 +14,8 @@ const almostFullBleed = {
 function withOpacity(variableName) {
 	return ({ opacityValue }) => {
 		if (opacityValue !== undefined) {
-			// return 'rgba(var(' + variableName + '), ' + opacityValue + ')'
 			return `rgba(var(${variableName}), ${opacityValue})`
 		}
-		// return 'rgba(var(' + variableName + '))'
 		return `rgb(var(${variableName}))`
 	}
 }
@@ -101,6 +99,9 @@ module.exports = {
 			},
 		},
 		extend: {
+			backgroundColor: {
+				'code-skin-dark': withOpacity('--background'),
+			},
 			typography: (theme) => ({
 				DEFAULT: {
 					css: {

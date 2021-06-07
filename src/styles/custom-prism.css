@@ -24,7 +24,18 @@
 		--radii-1: 2px;
 		--radii-2: 4px;
 
-		--line-numbers: rgba(128, 128, 128, 1);
+		--line-numbers: var(--colors-gray);
+		--faded-lines: var(--colors-gray);
+
+		--highlighted-word-bg: hsl(345deg 66% 73% / 30%);
+		--highlighted-word-bg-active: hsl(345deg 66% 73% / 100%);
+		--highlighted-word-text: var(--colors-white);
+		--deletedWordBg: var(--colors-red);
+		--deletedWordBgActive: hsl(206deg 22% 64% / 30%);
+		--deletedWordText: var(--colors-black);
+		--addedWordBg: rgba(0, 245, 196, 0.1);
+		--addedWordBgActive: hsl(206deg 22% 64% / 30%);
+		--addedWordText: var(--colors-turq);
 	}
 
 	pre {
@@ -163,18 +174,61 @@
 			}
 		}
 
-		.highlight-line {
-			&[data-highlighted='false'] {
-				opacity: 0.4;
+		/* Styles for highlighted word */
+
+		.highlight-word {
+			--bg-and-shadow: var(--highlighted-word-bg);
+			--x-offset: 1px;
+			text-decoration: none;
+			color: var(--highlighted-word-text);
+			background-color: var(--bg-and-shadow);
+			display: inline-block;
+			box-shadow: var(--x-offset) 0 0 0 var(--bg-and-shadow),
+				-var(--x-offset) 0 0 0 var(--bg-and-shadow);
+			border-radius: var(--space-1);
+
+			/* reset the color for tokens inside highlighted words */
+			.token {
+				color: inherit;
 			}
 
-			&[data-highlighted='true'] {
+			&:is(a):hover,
+			&.on {
+				--bg-and-shadow: var(--highlighted-word-bg-active);
+				transition: all 100ms ease;
 			}
 		}
 
-		.highlight-word {
+		.token.deleted .highlight-word {
+			--bg-and-shadow: var(--deletedWordBg);
+			color: var(--deleted-word-text);
+
 			&.on {
-				background-color: darkblue;
+				--bg-and-shadow: var(--deleted-word-bg-active);
+			}
+		}
+
+		.token.inserted .highlight-word {
+			--bg-and-shadow: var(--added-word-bg);
+			color: var(--added-word-text);
+
+			&.on {
+				--bg-and-shadow: var(--added-word-bg-active);
+			}
+		}
+
+		/* Styles for highlighted lines */
+
+		.highlight-line {
+			&,
+			* {
+				transition: color 150ms ease;
+			}
+			&[data-highlighted='false'] {
+				&,
+				* {
+					color: var(--faded-lines);
+				}
 			}
 		}
 	}

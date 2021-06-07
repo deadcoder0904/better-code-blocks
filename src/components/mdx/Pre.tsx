@@ -9,7 +9,7 @@ type PreProps = {
 export const Pre = ({ children, theme, showLineNumbers }: PreProps) => {
 	return (
 		<pre
-			className={`px-4 py-3 overflow-x-auto rounded-md ${
+			className={`px-4 py-3 overflow-x-auto rounded-md bg-code-skin-dark ${
 				theme ? `${theme}-theme` : 'bg-gray-900'
 			} ${showLineNumbers ? 'line-numbers' : ''}`}
 		>
